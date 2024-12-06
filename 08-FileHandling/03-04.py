@@ -1,18 +1,18 @@
 ###
 # Calculates the total value of money spent
 #
-import re # module for regular expressions
+import re  # module for regular expressions
 
 # file name with shopping report
-email_file = 'report.txt'
+email_file = "report.txt"
 
 # read the content of email
-with open(email_file, 'r') as file:
+with open(email_file, "r") as file:
     email = file.read()
 
 # regular expression pattern
 # for amounts (assuming amounts are in the format €123)
-pattern = r'€\d+'
+pattern = r"€\d+"
 
 # extract numbers from email
 # tip: findall() method returns an array
@@ -25,4 +25,4 @@ for amount in amounts:
     total += int(amount[1:])
 
 # print result
-print(f'Total amount spent: €{total}')
+print(f"Total amount spent: €{total}")
